@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Galería CSS — Obras en puro CSS</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Galería CSS</h1>
+    <p class="tagline">Arte hecho con HTML &amp; CSS — explora, copia, aprende.</p>
+
+    <nav class="filters" aria-label="Filtros de galería">
+      <button data-filter="all" class="active">Todas</button>
+      <button data-filter="geom">Geométrico</button>
+      <button data-filter="portrait">Retrato</button>
+      <button data-filter="experimental">Experimental</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="gallery" class="grid" aria-live="polite">
+      <!-- Items se inyectan desde JS / data -->
+    </section>
+  </main>
+
+  <!-- Modal / Lightbox -->
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel">
+      <button class="modal-close" aria-label="Cerrar" data-close>&times;</button>
+      <h2 id="modal-title"></h2>
+      <p id="modal-author" class="muted"></p>
+      <div id="modal-art" class="art-preview"></div>
+      <pre id="modal-code" class="codeblock"><code></code></pre>
+      <p id="modal-desc"></p>
+    </div>
+  </div>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
